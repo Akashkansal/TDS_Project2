@@ -14,27 +14,17 @@ This document presents a detailed analysis of the provided dataset and narrates 
 2. **Correlation Analysis:**
    - Analyzed relationships between variables to determine key correlations.
    - A heatmap was generated and saved as `correlation_matrix.png`.
+`
 
-3. **Regression Analysis:**
-   - Key features impacting the target variable were identified.
-   - Feature importances:
-     ```
-     N/A
-     ```
-
-4. **Time Series Analysis:**
+3. **Time Series Analysis:**
    - Patterns over time were examined to help predict future trends.
    - Visualization saved as `time_series_analysis.png`.
 
-5. **Cluster Analysis:**
-   - Natural groupings were identified using clustering algorithms.
-   - Cluster assignments were added to the dataset for further exploration.
-
-6. **Geographic Analysis:**
+4. **Geographic Analysis:**
    - Location-based insights were derived from latitude and longitude data.
    - Geographic plot saved as `geographic_analysis.png`.
 
-7. **Network Analysis:**
+5. **Network Analysis:**
    - Placeholder functionality for network insights is available.
 
 ---
@@ -47,7 +37,7 @@ The dataset contains 2363 rows and 11 columns, offering a wealth of information.
 
 > Once upon a time in the vast world of data, there existed a rich tapestry woven with stories about the well-being of nations. A dataset containing 2,363 rows and 11 thoughtful columns became a treasure trove for exploration. Among its components were vital indicators of happiness and prosperity, such as the Life Ladder, Log GDP per capita, Social Support, and other aspects that detail the quality of life experienced by people across different countries and years.
 
-As our journey began by surveying the dataset, we quickly noted an essential characteristic—there were missing values scattered across various columns. However, the heart of the data still beat strongly with strong indicators of life satisfaction, illuminating our path through the narratives buried within.
+As our journey began by surveying the dataset, we quickly noted an essential characteristicï¿½there were missing values scattered across various columns. However, the heart of the data still beat strongly with strong indicators of life satisfaction, illuminating our path through the narratives buried within.
 
 ### The Tale of the Life Ladder
 
@@ -59,7 +49,7 @@ Next, we turned our gaze toward economic measures, notably the Log GDP per capit
 
 ### A Social Support Saga
 
-Digging deeper, we uncovered tales of Social Support, an element that plays a crucial role in happiness. With an average of 0.81 and a maximum score close to the zenith of human connection at 0.987, it was evident that solidarity and shared experiences mattered greatly to wellbeing. Yet, we also saw that 13 values were missing from this narrative, suggesting that the social frameworks underlying some countries’ cultures were yet to be fully comprehended.
+Digging deeper, we uncovered tales of Social Support, an element that plays a crucial role in happiness. With an average of 0.81 and a maximum score close to the zenith of human connection at 0.987, it was evident that solidarity and shared experiences mattered greatly to wellbeing. Yet, we also saw that 13 values were missing from this narrative, suggesting that the social frameworks underlying some countriesï¿½ cultures were yet to be fully comprehended.
 
 ### The Freedom Chronicles 
 

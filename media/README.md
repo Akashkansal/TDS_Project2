@@ -15,26 +15,16 @@ This document presents a detailed analysis of the provided dataset and narrates 
    - Analyzed relationships between variables to determine key correlations.
    - A heatmap was generated and saved as `correlation_matrix.png`.
 
-3. **Regression Analysis:**
-   - Key features impacting the target variable were identified.
-   - Feature importances:
-     ```
-     N/A
-     ```
 
-4. **Time Series Analysis:**
+3. **Time Series Analysis:**
    - Patterns over time were examined to help predict future trends.
    - Visualization saved as `time_series_analysis.png`.
 
-5. **Cluster Analysis:**
-   - Natural groupings were identified using clustering algorithms.
-   - Cluster assignments were added to the dataset for further exploration.
-
-6. **Geographic Analysis:**
+4. **Geographic Analysis:**
    - Location-based insights were derived from latitude and longitude data.
    - Geographic plot saved as `geographic_analysis.png`.
 
-7. **Network Analysis:**
+5. **Network Analysis:**
    - Placeholder functionality for network insights is available.
 
 ---
@@ -79,7 +69,7 @@ Moreover, addressing the repeatability challenge should be prioritized to transf
 
 As we look forward, the journey through our data doesn't end here. Continued monitoring, deeper dives, and proactive strategies based on this analysis will ensure that we not only meet but exceed user expectations, securing a vibrant future for our offerings. 
 
-Engaging the users, understanding their needs, and addressing the gaps identified will be the cornerstones of our approach moving forward. Thus, the story of our dataset evolves into a saga of growth, engagement, and sustained connection—a true narrative of data-driven success.
+Engaging the users, understanding their needs, and addressing the gaps identified will be the cornerstones of our approach moving forward. Thus, the story of our dataset evolves into a saga of growth, engagement, and sustained connectionï¿½a true narrative of data-driven success.
 
 ---
 

@@ -15,26 +15,16 @@ This document presents a detailed analysis of the provided dataset and narrates 
    - Analyzed relationships between variables to determine key correlations.
    - A heatmap was generated and saved as `correlation_matrix.png`.
 
-3. **Regression Analysis:**
-   - Key features impacting the target variable were identified.
-   - Feature importances:
-     ```
-     N/A
-     ```
 
-4. **Time Series Analysis:**
+3. **Time Series Analysis:**
    - Patterns over time were examined to help predict future trends.
    - Visualization saved as `time_series_analysis.png`.
 
-5. **Cluster Analysis:**
-   - Natural groupings were identified using clustering algorithms.
-   - Cluster assignments were added to the dataset for further exploration.
-
-6. **Geographic Analysis:**
+4. **Geographic Analysis:**
    - Location-based insights were derived from latitude and longitude data.
    - Geographic plot saved as `geographic_analysis.png`.
 
-7. **Network Analysis:**
+5. **Network Analysis:**
    - Placeholder functionality for network insights is available.
 
 ---
@@ -47,7 +37,7 @@ The dataset contains 10000 rows and 23 columns, offering a wealth of information
 
 > ### Unveiling Literary Trends through Data Analysis
 
-In the expansive universe of literature represented by our dataset of 10,000 books, rich narratives emerge not just from the pages of stories but also from the data we analyze. It's a fascinating journey that bridges the worlds of numbers and literature, revealing insights that can shape a reader's choices and enhance an author’s visibility.
+In the expansive universe of literature represented by our dataset of 10,000 books, rich narratives emerge not just from the pages of stories but also from the data we analyze. It's a fascinating journey that bridges the worlds of numbers and literature, revealing insights that can shape a reader's choices and enhance an authorï¿½s visibility.
 
 #### The Landscape of Literature
 
@@ -84,7 +74,7 @@ The **language_code** column also indicates a complex literary landscape; out of
 
 What started as a numerical exploration of a literary dataset has transformed into a multidimensional perspective on reading trends, preferences, and potentials in the publishing landscape. By weaving together insights from ratings, counts, and clusters, we have begun to illuminate the path toward understanding how books resonate with readers today.
 
-As data analysts, we hold the key to establishing connections between authors and their audiences, ensuring that every book finds its rightful place in the reader’s hands - one insightful analysis at a time. The intersection of literature and data not only enriches our understanding but also empowers the literary world to thrive in this ever-evolving narrative landscape.
+As data analysts, we hold the key to establishing connections between authors and their audiences, ensuring that every book finds its rightful place in the readerï¿½s hands - one insightful analysis at a time. The intersection of literature and data not only enriches our understanding but also empowers the literary world to thrive in this ever-evolving narrative landscape.
 
 ---
 

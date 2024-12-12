@@ -198,10 +198,8 @@ def save_readme(df, analysis_summary, story):
         f.write("## Visualizations\n\n")
         f.write("### Heatmap\n")
         f.write("- Saved as `correlation_matrix.png`\n\n")
-        f.write("### Time Series\n")
-        f.write("- Saved as `time_series_analysis.png`\n\n")
-        f.write("### Geographic Plot\n")
-        f.write("- Saved as `geographic_analysis.png`\n\n")
+        f.write("### Pairplot\n")
+        f.write("- Saved as `pairplot.png`\n\n")
         f.write("---\n")
         f.write("Thank you for reviewing this analysis. For questions or further exploration, please reach out!\n")
 

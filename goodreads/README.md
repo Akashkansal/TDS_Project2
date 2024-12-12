@@ -83,11 +83,8 @@ As data analysts, we hold the key to establishing connections between authors an
 ### Heatmap
 - Saved as `correlation_matrix.png`
 
-### Time Series
-- Saved as `time_series_analysis.png`
-
-### Geographic Plot
-- Saved as `geographic_analysis.png`
+### Pairplot
+- Saved as `pairplot.png`
 
 ---
 Thank you for reviewing this analysis. For questions or further exploration, please reach out!

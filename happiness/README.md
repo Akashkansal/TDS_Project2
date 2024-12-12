@@ -76,11 +76,8 @@ In conclusion, this data-driven exploration was more than an analysis; it was an
 ### Heatmap
 - Saved as `correlation_matrix.png`
 
-### Time Series
-- Saved as `time_series_analysis.png`
-
-### Geographic Plot
-- Saved as `geographic_analysis.png`
+### Pairplot
+- Saved as `pairplot.png`
 
 ---
 Thank you for reviewing this analysis. For questions or further exploration, please reach out!

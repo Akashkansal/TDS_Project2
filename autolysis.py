@@ -39,13 +39,23 @@ def load_dataset(file_path):
 
 # Create visualizations
 def visualize_data(df):
+    """
+    Generate and save visualizations such as pairplots and target distributions.
+
+    Args:
+        df (pd.DataFrame): The dataset to visualize.
+    """
     sns.set(style="whitegrid")
     num_cols = df.select_dtypes(include=['float64', 'int64']).columns
+
     if len(num_cols) > 1:
-        sns.pairplot(df[num_cols])
-        plt.title("Pairplot of Numerical Features")
+        top_features = num_cols[:5]  # Adjust as needed
+        sampled_df = df[top_features].sample(n=min(500, len(df)), random_state=42)
+        sns.pairplot(sampled_df)
+        plt.title("Pairplot of Selected Features (Sampled Data)")
         plt.savefig("pairplot.png")
         print("Pairplot saved as pairplot.png")
+
     if "target" in df.columns:
         sns.histplot(df["target"], kde=True, bins=30)
         plt.title("Distribution of Target Variable")
@@ -123,7 +133,19 @@ def network_analysis():
     print("Network analysis functionality is a placeholder.")
 
 # Generate a story using OpenAI API
+import time
+
 def narrate_story(df, analysis_summary):
+    """
+    Generate a narrative story based on the dataset analysis.
+
+    Args:
+        df (pd.DataFrame): The dataset analyzed.
+        analysis_summary (dict): Summary of the analysis.
+
+    Returns:
+        str: Generated story.
+    """
     significant_analyses = []
 
     if 'target' in df.columns:
@@ -156,17 +178,28 @@ def narrate_story(df, analysis_summary):
         ],
         "max_tokens": 3000
     }
-    try:
-        response = requests.post(url, headers=headers, json=payload)
-        response.raise_for_status()
-        data = response.json()
-        story = data['choices'][0]['message']['content']
-        return story
-    except requests.exceptions.RequestException as req_err:
-        print(f"Request error: {req_err}")
-    except ValueError as val_err:
-        print(f"JSON parsing error: {val_err}")
-    return None
+
+    for attempt in range(5):  # Retry up to 5 times
+        try:
+            response = requests.post(url, headers=headers, json=payload)
+            response.raise_for_status()
+            data = response.json()
+            story = data['choices'][0]['message']['content']
+            return story
+        except requests.exceptions.RequestException as req_err:
+            if response.status_code == 429:
+                wait_time = 2 ** attempt  # Exponential backoff
+                print(f"Rate limit hit. Retrying in {wait_time} seconds...")
+                time.sleep(wait_time)
+            else:
+                print(f"Request error: {req_err}")
+                break
+        except ValueError as val_err:
+            print(f"JSON parsing error: {val_err}")
+            break
+
+    return "Unable to generate story due to repeated API errors."
+
 
 # Save analysis results and story to README.md
 def save_readme(df, analysis_summary, story):
@@ -212,10 +245,11 @@ def save_readme(df, analysis_summary, story):
         f.write("Thank you for reviewing this analysis. For questions or further exploration, please reach out!\n")
 
 if __name__ == "__main__":
+    
     if len(sys.argv) != 2:
-        print("Usage: python autolysis.py <dataset.csv>")
+        print("Usage: uv run autolysis.py <dataset.csv>")
         sys.exit(1)
-
+    print(sys.argv)
     file_path = sys.argv[1]
     df = load_dataset(file_path)
 
